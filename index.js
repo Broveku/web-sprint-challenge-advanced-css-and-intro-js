@@ -220,7 +220,10 @@ console.log(artists[2]['bio']);
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
-artists[8]['name'] = 'Vincent Van Gogh'
+// artists[8]['name'] = 'Vincent Van Gogh'
+
+
+
 // console.log(artists)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
@@ -246,13 +249,16 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(array, string){
+function get20s(array){
   let newArr= []
-  const {years} = array[i][years]
+  
   for (let i=0 ;i<array.length; i++){
-    if (array[string][years])includes(['string'])                     //UNFINSHED//
-      newArr.push(array[i])
+    let birthYear = array[i]['years'].split(" - ");
+    
+    if (parseInt(birthYear[0]) >= 1900 && parseInt(birthYear[1]) <= 2000 ){
       
+      newArr.push(array[i]['name'])
+      } 
     }
  return newArr 
   }
@@ -317,8 +323,14 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+   let newArr = []
+   for (let i=0;i<array.length;i++){
+     if(array[i].paintings >=100){
+       newArr.push(array[i]['name'])
+     }
+   }
+   return newArr
 }
 
 
