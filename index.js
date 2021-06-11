@@ -1,3 +1,5 @@
+import { loadPartialConfig } from "@babel/core";
+
 export const artists = [
     {
       "id": 0,
@@ -293,9 +295,18 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(array){
+    array.push({
+      id: 20,
+      name: 'Jordan Gearheart', 
+      years: '1996-2021',
+      genre: 'Web Design', 
+      nationality: 'White',
+      bio: 'this is a nonsense bio bc i dont want to have a bunch of lorem ipsum on here :)'
+    })
+    return array
   }
+
 
   
 
