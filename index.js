@@ -233,7 +233,7 @@ function getArtistByIndex(array,index) {
    const {name} = array[index]
    return `the artist at index ${index} is ${name}`
 }  
-console.log(getArtistByIndex(artists,[0]))
+// console.log(getArtistByIndex(artists,[0]))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -244,9 +244,21 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
-}
+function get20s(array, string){
+  let newArr= []
+  const {years} = array[i][years]
+  for (let i=0 ;i<array.length; i++){
+    if (array[string][years])includes(['string'])                     //UNFINSHED//
+      newArr.push(array[i])
+      
+    }
+ return newArr 
+  }
+
+  
+  // console.log(get20s(artists))
+   
+
 
 
 
@@ -259,8 +271,9 @@ function get20s(/*Your Code Here*/){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
-   /*Your Code Here*/
+function removeArtist(array, index){
+   array.splice(0,1)
+   return array.length
 }
    
 
